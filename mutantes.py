@@ -103,7 +103,7 @@ print("diagonales secundarias:")
 while cont < 3:
     valor = 6 - cont
     diagonales_secundaria = [dna[i][valor - 1 - i] for i in range(valor)]
-    print(vectores(diagonales_secundaria))
+    # print(vectores(diagonales_secundaria))
     if vectores(diagonales_secundaria):
      contadorVerdades += 1
 
@@ -113,13 +113,13 @@ cont = 0
 while cont < 2:
     valor = 5 - cont
     diagonalesSecundariaA = [dna[i + cont + 1][5 - i] for i in range(valor)]
-    print(vectores(diagonales_secundaria))
+    # print(vectores(diagonales_secundaria))
     if vectores(diagonalesSecundariaA):
         contadorVerdades += 1
     cont += 1
 print("diagonal principal")
 diagonalesPrincipal = [dna[i][i] for i in range(6)]
-print(vectores(diagonalesPrincipal))
+# print(vectores(diagonalesPrincipal))
 if vectores(diagonalesPrincipal):
     contadorVerdades += 1
 print("diagonales principales de arriba")
@@ -127,7 +127,7 @@ cont = 0
 while cont < 2:
     valor = 5 - cont
     diagonalesPrincipalesB = [dna[i][i + 1 + cont] for i in range(valor)]
-    print(vectores(diagonalesPrincipalesB))
+    # print(vectores(diagonalesPrincipalesB))
     if vectores(diagonalesPrincipalesB):
         contadorVerdades += 1
     cont += 1
@@ -136,20 +136,20 @@ cont = 0
 while cont < 2:
     valor = 5 - cont
     diagonalesPrincipalesA = [dna[i + 1 + cont][i] for i in range(valor)]
-    print(vectores(diagonalesPrincipalesA))
+    # print(vectores(diagonalesPrincipalesA))
     if vectores(diagonalesPrincipalesA):
         contadorVerdades += 1
     cont += 1
 print("columnas")
 for j in range(6):
     col = [dna[i][j] for i in range(6)]
-    print(vectores(col))
+    # print(vectores(col))
     if vectores(col):
         contadorVerdades += 1
 print("filas")
 for j in range(6):
     fil = [dna[i][j] for i in range(6)]
-    print(vectores(fil))
+    # print(vectores(fil))
     if vectores(fil):
         contadorVerdades += 1
  
