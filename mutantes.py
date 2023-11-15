@@ -94,12 +94,11 @@ opcion_elegida = int(input("Ingresa el número de la opción: "))
 
 dna = ingresar_dna(opcion_elegida)
 
-if opcion_elegida in [1, 2, 3]:
-    print("ADN ingresado:", dna)
+
 
 mostrar_matriz(dna)
 valor, cont = 0, 0
-print("diagonales secundarias:")
+#print("diagonales secundarias:")
 while cont < 3:
     valor = 6 - cont
     diagonales_secundaria = [dna[i][valor - 1 - i] for i in range(valor)]
@@ -108,7 +107,7 @@ while cont < 3:
      contadorVerdades += 1
 
     cont += 1
-print("diagonales secundarias de abajo:")
+#print("diagonales secundarias de abajo:")
 cont = 0
 while cont < 2:
     valor = 5 - cont
@@ -117,12 +116,12 @@ while cont < 2:
     if vectores(diagonalesSecundariaA):
         contadorVerdades += 1
     cont += 1
-print("diagonal principal")
+# print("diagonal principal")
 diagonalesPrincipal = [dna[i][i] for i in range(6)]
 # print(vectores(diagonalesPrincipal))
 if vectores(diagonalesPrincipal):
     contadorVerdades += 1
-print("diagonales principales de arriba")
+#print("diagonales principales de arriba")
 cont = 0
 while cont < 2:
     valor = 5 - cont
@@ -131,7 +130,7 @@ while cont < 2:
     if vectores(diagonalesPrincipalesB):
         contadorVerdades += 1
     cont += 1
-print("diagonales principales de abajo")
+#print("diagonales principales de abajo")
 cont = 0
 while cont < 2:
     valor = 5 - cont
@@ -140,13 +139,13 @@ while cont < 2:
     if vectores(diagonalesPrincipalesA):
         contadorVerdades += 1
     cont += 1
-print("columnas")
+#print("columnas")
 for j in range(6):
     col = [dna[i][j] for i in range(6)]
     # print(vectores(col))
     if vectores(col):
         contadorVerdades += 1
-print("filas")
+#print("filas")
 for j in range(6):
     fil = [dna[i][j] for i in range(6)]
     # print(vectores(fil))
