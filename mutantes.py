@@ -79,8 +79,19 @@ def ingresar_dna(opcion):
                 print(f"Letra seleccionada: {letra_seleccionada}")
                 dna[i][j] = letra_seleccionada
         return dna
+    elif opcion == 4:
+        dna = [["" for _ in range(6)] for _ in range(6)]
+        for i in range(6):
+            for j in range(6):
+                letra = input(f"Ingrese el valor para la fila {i + 1}, columna {j + 1} (a/c/g/t): ").lower()
+                if letra in ["a", "c", "g", "t"]:
+                    dna[i][j] = letra
+                else:
+                    print("¡Letra no válida! Debe ser 'a', 'c', 'g' o 't'.")
+                    j -= 1  # Decrementamos j para volver a solicitar la misma posición
+        return dna
     else:
-        print("Opción no válida. Selecciona 1, 2 o 3.")
+        print("Opción no válida. Selecciona 1, 2 , 3 o 4")
 
 # Menú
 print("Selecciona una opción:")
@@ -89,7 +100,7 @@ print("ADN MUTANTE:  [ATGCGA, CAGTGC, TTATGT, AGAAGG, CCCCTA, CCCCTG] ")
 print("2. Ingresar segundo conjunto de ADN que dara como resultado HUMANO (una o menos convinaciones de cuatro letras iguales): ")
 print("ADN HUMANO: [ATGCAA, CTGTGC, TTGTGT, AGAAGG, CCACTA, CCACTG]")
 print("3. Generar conjunto de ADN aleatorio  llenando aleatoriamente con A,C,G y T")
-
+print("4. Ingrear manualmente el codigo de ADN con las siguientes letras:  A,C,G y T")
 opcion_elegida = int(input("Ingresa el número de la opción: "))
 
 dna = ingresar_dna(opcion_elegida)
