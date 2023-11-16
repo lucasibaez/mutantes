@@ -14,8 +14,7 @@ Funciones Definidas:
 
 mostrar_matriz(dna): Muestra en consola la matriz de ADN.
 vectores(dna): Evalúa si hay más de una secuencia de cuatro letras iguales en una cadena de ADN. Devuelve True si cumple con el criterio y False en caso contrario.
-ingresar_dna(opcion): Permite al usuario seleccionar entre tres opciones para ingresar conjuntos de ADN: dos predefinidos y uno generado aleatoriamente.
-Matriz de ADN:
+ingresar_dna(opcion): Permite al usuario seleccionar entre cuatro opciones para ingresar conjuntos de ADN: dos predefinidos , uno generado aleatoriamente y un cuarto que es manual.
 
 El código utiliza una matriz de 6x6 para representar el ADN.
 
